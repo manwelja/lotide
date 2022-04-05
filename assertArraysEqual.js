@@ -23,4 +23,4 @@ const assertArraysEqual = function(compArr1, compArr2) {
   }
 };
 
-assertArraysEqual([1,2,3,4,5,6,7],[1,2,3,4,5,6]);
+assertArraysEqual([1,2,3,4,5,6],[1,2,3,4,5,6]);
