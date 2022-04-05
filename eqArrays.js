@@ -8,13 +8,19 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(arr1, arr2) {
-  
+  let equFlag = true;
+
+  if (arr1.length !== arr2.length) {
+    equFlag = false;
+  }
+
   arr1.forEach((element, index) => {
     if (element !== arr2[index]) {
-      return false;
+      equFlag = false;
     }
   });
-  return true;
+
+  return equFlag;
 };
 
 //TEST CODE
