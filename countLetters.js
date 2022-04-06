@@ -8,8 +8,8 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetters = function(sentence) {
-  let countObject = {};
-  let lowerSentence = sentence.toLowerCase();
+  const countObject = {};
+  const lowerSentence = sentence.toLowerCase();
 
   for (let letter of lowerSentence) {
     Object.keys(countObject).indexOf(letter) < 0 ? countObject[letter] = 1 : countObject[letter] ++;
