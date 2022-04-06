@@ -14,12 +14,12 @@ const eqArrays = function(arr1, arr2) {
   return equFlag;
 };
 
-const assertArraysEqual = function(compArr1, compArr2) {
+const assertArraysEqual = function(actual, expected) {
 
-  if (eqArrays(compArr1, compArr2)) {
-    console.log(`👍 Assertion Passed: ${compArr1} === ${compArr2}`);
+  if (eqArrays(actual, expected)) {
+    console.log(`👍 Assertion Passed: ${actual} === ${expected}`);
   } else {
-    console.log(`👎 Assertion Failed: ${compArr1} !== ${compArr2}`);
+    console.log(`👎 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 

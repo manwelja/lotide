@@ -1,3 +1,4 @@
+// function that compares two arrays and writes the result to the console
 const eqArrays = function(arr1, arr2) {
   let equFlag = true;
 
@@ -14,13 +15,13 @@ const eqArrays = function(arr1, arr2) {
   return equFlag;
 };
 
-const assertArraysEqual = function(compArr1, compArr2) {
+const assertArraysEqual = function(actual, expected) {
 
-  if (eqArrays(compArr1, compArr2)) {
-    console.log(`👍 Assertion Passed: ${compArr1} === ${compArr2}`);
+  if (eqArrays(actual, expected)) {
+    console.log(`👍 Assertion Passed: ${actual} === ${expected}`);
   } else {
-    console.log(`👎 Assertion Failed: ${compArr1} !== ${compArr2}`);
+    console.log(`👎 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 
-assertArraysEqual([1,2,3,4,5,6],[1,2,3,4,5,6]);
+assertArraysEqual([1,2,3,4,5,6],[1,2,3,4,5,6,7]);

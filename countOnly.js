@@ -17,7 +17,6 @@ const countOnly = function(allItems, itemsToCount) {
     //the ! will check for falsy values, not using it will check for truthy
     if (itemsToCount[item]) {
       //if the key exists in he count array, increment is, otherwise create a new key initialized with 1
-      //Object.keys(results).indexOf(item) < 0 ? results[item] = 1 : results[item] ++;
       if (results[item]) {
         results[item] += 1;
       } else {
