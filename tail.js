@@ -1,5 +1,4 @@
 const assertEqual = function(actual, expected) {
-
   if (actual === expected) {
     console.log(`👍 Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -16,5 +15,5 @@ const tail = function(arrFull) {
   }
 };
 
-console.log(tail([]));
+console.log(tail([1,2,3,4]));
 
