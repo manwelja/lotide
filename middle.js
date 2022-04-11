@@ -1,28 +1,3 @@
-const eqArrays = function(arr1, arr2) {
-  let equFlag = true;
-
-  if (arr1.length !== arr2.length) {
-    equFlag = false;
-  }
-
-  arr1.forEach((element, index) => {
-    if (element !== arr2[index]) {
-      equFlag = false;
-    }
-  });
-
-  return equFlag;
-};
-
-const assertArraysEqual = function(actual, expected) {
-
-  if (eqArrays(actual, expected)) {
-    console.log(`👍 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`👎 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const middle = function(inputArray) {
   let numToSlice = 0;
   let startIndex = 0;
@@ -40,10 +15,4 @@ const middle = function(inputArray) {
   return inputArray.slice(startIndex, startIndex + numToSlice);
 };
 
-assertArraysEqual(middle('[]'),[], true);
-assertArraysEqual(middle([1]),[], true);
-assertArraysEqual(middle([1, 2]), [], true);
-assertArraysEqual(middle([1, 2, 3]), [2], true);
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3], true);
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3], true);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4], true);
+module.exports = middle;
