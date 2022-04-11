@@ -1,19 +1,4 @@
-// function that compares two arrays and writes the result to the console
-const eqArrays = function(arr1, arr2) {
-  let equFlag = true;
-
-  if (arr1.length !== arr2.length) {
-    equFlag = false;
-  }
-
-  arr1.forEach((element, index) => {
-    if (element !== arr2[index]) {
-      equFlag = false;
-    }
-  });
-
-  return equFlag;
-};
+const eqArrays = require('./eqArrays.js');
 
 const assertArraysEqual = function(actual, expected) {
 
@@ -24,4 +9,4 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-assertArraysEqual([1,2,3,4,5,6],[1,2,3,4,5,6,7]);
+module.exports = assertArraysEqual;
