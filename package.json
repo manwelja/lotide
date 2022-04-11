@@ -3,9 +3,9 @@
     "chai": "^4.3.6",
     "mocha": "^9.2.2"
   },
-  "name": "lotide",
+  "name": "@manwelj/lotide",
   "version": "1.0.0",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "mocha"
   },
@@ -102,11 +102,11 @@
     "url": "git+https://github.com/manwelja/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jennifer Manwell",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/manwelja/lotide/issues"
   },
   "homepage": "https://github.com/manwelja/lotide#readme",
-  "description": ""
+  "description": "A mini clone of the [Lodash](https://lodash.com) library created and published for learning purposes."
 }
