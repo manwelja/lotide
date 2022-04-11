@@ -29,3 +29,9 @@ The following functions are currently implemented:
 * `head(array)`: returns the first element of the passed in array
 * `tail(array)`: returns the last element of the passed in array
 * `middle(array)`: returns the middle element(s) of the passed in array
+* `flatten(array)`: returns a flat array when passed in an array of arrays
+* `countOnly([allItems], {itemsToCount})`: takes in a collection of items and return counts for a specific subset of those items as an object
+* `letterPositions(sentence)`: return all the indices (zero-based positions) in the string where each character is found
+* `findKeyByValue(string)`: searches for a key on an object where its value matches a given value, returns the key name
+* `eqObjects(object1, object2)`: compares two objects for equality, returns true or false
+* `eqArrays(array1, array2)`: compares two arrays for equality, returns true or false

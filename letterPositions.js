@@ -1,28 +1,5 @@
-const eqArrays = function(arr1, arr2) {
-  let equFlag = true;
-
-  if (arr1.length !== arr2.length) {
-    equFlag = false;
-  }
-
-  arr1.forEach((element, index) => {
-    if (element !== arr2[index]) {
-      equFlag = false;
-    }
-  });
-
-  return equFlag;
-};
-
-const assertArraysEqual = function(actual, expected) {
-
-  if (eqArrays(actual, expected)) {
-    console.log(`👍 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`👎 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
+// We'll implement a new function letterPositions which will return all the indices (zero-based positions) in the string where each character is found.
+// For each letter, instead of returning just one number to represent its number of occurrences, multiple numbers may be needed to represent all the places in the string that it shows up.
 const letterPositions = function(sentence) {
   const results = {};
   const lowerSentence = sentence.toLowerCase().split('');
@@ -41,11 +18,5 @@ const letterPositions = function(sentence) {
   return results;
 
 };
-  // We'll implement a new function letterPositions which will return all the indices (zero-based positions) in the string where each character is found.
+module.exports = letterPositions;
 
-// For each letter, instead of returning just one number to represent its number of occurrences, multiple numbers may be needed to represent all the places in the string that it shows up.
-
-let str = "lighthouse in the house";
-console.log(letterPositions(str));
-
-  
