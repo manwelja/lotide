@@ -1,11 +1,9 @@
-const assert = require('chai').assert;
+const {assert} = require('chai');
 const {flatten} = require('../index');
 
 describe("#flatten", () => {
-  it("returns [1, 2, 3, 4, 5, 6] for [1, 2, [3, 4], 5, [6]]", () => {
+  it("returns a flat array when passed a nested array", () => {
     assert.deepEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
-  });
-  it("returns [ 'a', 'b', 'c', 'd', 'e', 'fghi' ] for ['a', 'b', ['c', 'd'], 'e', ['fghi']]", () => {
     assert.deepEqual(flatten(['a', 'b', ['c', 'd'], 'e', ['fghi']]), [ 'a', 'b', 'c', 'd', 'e', 'fghi' ]);
   });
 });

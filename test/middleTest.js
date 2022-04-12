@@ -1,20 +1,18 @@
-const assert = require('chai').assert;
+const {assert} = require('chai');
 const {middle} = require('../index');
 
 describe("#middle", () => {
-  it("returns [] for []", () => {
+  it("returns an empty array when an empty array is passed in", () => {
     assert.deepEqual(middle([]), []);
   });
-  it("returns [] for ['1']", () => {
+  it("returns an empty array when an array with less than three element is passed in", () => {
     assert.deepEqual(middle(['1']), []);
-  });
-  it("returns [] for [1, 2]", () => {
     assert.deepEqual(middle([1, 2]), []);
   });
-  it("returns [2] for [1, 2, 3]", () => {
+  it("returns the middle element when an array with an odd number of elements is passed in", () => {
     assert.deepEqual(middle([1, 2, 3]), [2]);
   });
-  it("returns ['2', '3'] for ['1', '2', '3', '4']", () => {
+  it("returns the middle two elements when an array with an even number of elements is passed in", () => {
     assert.deepEqual(middle(['1', '2', '3', '4']), ['2', '3']);
   });
   
