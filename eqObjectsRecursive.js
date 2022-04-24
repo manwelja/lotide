@@ -1,4 +1,4 @@
-//const { eqArraysRecursive } = require('./eqArraysRecursive');
+const assertEqual = require('./assertEqual');
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
@@ -22,9 +22,9 @@ const eqObjectsRecursive = function(object1, object2) {
   return true;
 };
 
-console.log(eqObjectsRecursive({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }),"true");// => true
-//eqObjectsRecursive({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })
-console.log(eqObjectsRecursive({ a: { y: 0, z: 1 }, b: 2 }, { a: { y: 0, z: 1 }, b: 2 }), "true"); // => true
-console.log(eqObjectsRecursive({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 3 }), "false"); // => false
-//eqObjectsRecursive({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }); // => false
+assertEqual(eqObjectsRecursive({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true);// => true
+assertEqual(eqObjectsRecursive({ a: { y: 0, z: 1 }, b: 2 }, { a: { y: 0, z: 1 }, b: 2 }), true); // => true
+assertEqual(eqObjectsRecursive({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 3 }), false); // => false
+
 module.exports = { eqObjectsRecursive };
+
