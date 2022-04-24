@@ -14,7 +14,7 @@ const eqArraysRecursive = function(arr1, arr2) {
       }
     } else {
       //if the current array element is also an array, append the rest of the array to the current element and recurse
-      return true && eqArraysRecursive(arr1[i].concat(arr1.slice(i + 1)), arr2[i].concat(arr2.slice(i + 1)));
+      return true && eqArraysRecursive(arr1[i], arr2[i]);
     }
   }
   return true;
